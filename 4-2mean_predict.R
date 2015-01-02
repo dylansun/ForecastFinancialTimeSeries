@@ -1,0 +1,5 @@
+getSymbols("000538.sz")
+d <- ts(`000538.SZ`[,1])
+ynby <- window(d, start = length(d) - 300)
+ynby_f <- meanf(ynby, h = 10)
+plot(ynby_f)
